@@ -57,7 +57,7 @@ for z in range(200):
 	versi = random.choice(["10_0_2","10_1_1","10_2","10_2_1","10_3_1","10_3_2","10_3_3"])
 	verchrome = random.choice(["602.1.50","602.2.14","602.3.12","602.4.6","603.1.30","603.2.4","603.3.8","601.1.46"])
 	mob = random.choice(["14A456","14B100","14C92","14D27","14E304","14F89","14G60","13C75","13D15","13E233","13E238","13F69","13G34","13G36"])
-	ua = f"[FBAN/MessengerLite;FBAV/{versi_chrome};FBBV/{str(rr(111111111,999999999)};FBDM/"+"{density=2.625,width=1080,height=1794};"+"FBLC/en_US;FBRV/0;FBCR/Verizon;FBMF/Google;FBBD/google;FBPN/com.facebook.mlite;FBDV/Pixel 2;FBSV/{versi_android};FBBK/1;FBOP/1;FBCA/arm64-v8a]"
+	ua = f"[FBAN/MessengerLite;FBAV/{versi_chrome};FBBV/{str(rr(111111111,999999999);FBDM/"+"{density=2.625,width=1080,height=1794};"+"FBLC/en_US;FBRV/0;FBCR/Verizon;FBMF/Google;FBBD/google;FBPN/com.facebook.mlite;FBDV/Pixel 2;FBSV/{versi_android};FBBK/1;FBOP/1;FBCA/arm64-v8a]"
 	if ua in ugent:pass
 	else:ugent.append(ua)
 	
